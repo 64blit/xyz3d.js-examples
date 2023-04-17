@@ -1,0 +1,40 @@
+{
+	"models": [
+		{
+			"name": "basic",
+			"path": "assets/scene.glb",
+			"enabled": true,
+			"position": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"rotation": {
+				"x": 0,
+				"y": 0,
+				"z": 0,
+				"w": 0
+			},
+			"interactable": [
+				{
+					"type": "goToNextZone",
+					"modelName": "enter_button",
+					"content": 1
+				}
+			],
+			"shadow": false,
+			"shadowBias": 0.00005,
+			"shadowNormalBias": 0.001,
+			"shadowRadius": 1.0,
+			"frustumCulled": false
+		}
+	],
+	"lights": [
+	]
+}
+
