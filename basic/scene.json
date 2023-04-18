@@ -21,15 +21,10 @@
 				"w": 0
 			},
 			"interactable": [
-				{
-					"type": "goToNextZone",
-					"modelName": "enter_button",
-					"content": 1
-				}
 			],
-			"shadow": false,
-			"shadowBias": 0.00005,
-			"shadowNormalBias": 0.001,
+			"shadow": true,
+			"shadowBias": -0.0005,
+			"shadowNormalBias": -0.0005,
 			"shadowRadius": 1.0,
 			"frustumCulled": false
 		}

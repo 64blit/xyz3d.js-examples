@@ -50,18 +50,38 @@
         {
 
             const xyzed = new XYZ3d({
+                debug: false,
                 jsonPath: 'scene.json',
                 domElements: {
                     canvas: document.getElementById('main-canvas'),
                     popup: document.getElementById('popup-content'),
                 },
+                camera: {
+                    postEffects: {
+                        bloom: {
+                            enabled: false
+                        }
+                    }
+                }
             })
 
 
             function onStart(result)
             {
-                document.getElementById('loading-screen').remove()
+                const loadingScreen = document.getElementById('loading-screen')
+                loadingScreen.remove()
+
                 xyzed.nextSceneZone(0)
+            }
+
+            xyzed.onSwipeDown = () =>
+            {
+                xyzed.nextSceneZone(1)
+            }
+
+            xyzed.onSwipeUp = () =>
+            {
+                xyzed.nextSceneZone(-1)
             }
 
             xyzed.setup()
