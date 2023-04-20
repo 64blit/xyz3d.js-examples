@@ -21,6 +21,11 @@
 				"w": 0
 			},
 			"interactable": [
+				{
+					"modelName": "homepage_button",
+					"type": "popup",
+					"content": "pages/test.html"
+				}
 			],
 			"shadow": true,
 			"shadowBias": -0.0005,
@@ -30,6 +35,13 @@
 		}
 	],
 	"lights": [
+		{
+			"name": "light",
+			"type": "ambientLight",
+			"enabled": true,
+			"color": "#ffffff",
+			"intensity": 0.1
+		}
 	]
 }
 
