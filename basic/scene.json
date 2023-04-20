@@ -1,0 +1,47 @@
+{
+	"models": [
+		{
+			"name": "basic",
+			"path": "assets/scene.glb",
+			"enabled": true,
+			"position": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"rotation": {
+				"x": 0,
+				"y": 0,
+				"z": 0,
+				"w": 0
+			},
+			"interactable": [
+				{
+					"modelName": "homepage_button",
+					"type": "popup",
+					"content": "pages/test.html"
+				}
+			],
+			"shadow": true,
+			"shadowBias": -0.0005,
+			"shadowNormalBias": -0.0005,
+			"shadowRadius": 1.0,
+			"frustumCulled": false
+		}
+	],
+	"lights": [
+		{
+			"name": "light",
+			"type": "ambientLight",
+			"enabled": true,
+			"color": "#ffffff",
+			"intensity": 0.1
+		}
+	]
+}
+

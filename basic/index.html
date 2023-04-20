@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>XYZ3d example</title>
+    <meta name="author" content="64blit" />
+    <meta name="description" content="XYZ3d CMS Example" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0,  initial-scale=1, shrink-to-fit=no" />
+
+    <link rel="icon" type="image/jpg" href="assets/avatar.jpg" />
+    <link href="./style.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+</head>
+
+<body>
+
+
+    <!-- rendering canvas -->
+
+    <canvas id="main-canvas" class="static-bg" title=""></canvas>
+
+
+
+    <!-- pupup iframe overlay -->
+
+    <div id="popup-content" class="hidden"></div>
+
+
+
+    <!-- loading screen -->
+
+    <div id="loading-screen">
+        <progress id="progress-bar" max="100" value="0" \>
+    </div>
+
+
+
+    <script type="module">
+
+        import { THREE, XYZ3d } from 'https://unpkg.com/xyz3d/dist/xyz3d.js'
+
+
+        window.addEventListener('load', (event) =>
+        {
+
+            const xyzed = new XYZ3d({
+                debug: true,
+                jsonPath: 'scene.json',
+                domElements: {
+                    canvas: document.getElementById('main-canvas'),
+                    popup: document.getElementById('popup-content'),
+                },
+            })
+
+
+            function onStart(result)
+            {
+                const loadingScreen = document.getElementById('loading-screen')
+                loadingScreen.remove()
+
+                xyzed.gotoSceneZone('demo')
+            }
+
+            xyzed.setup()
+                .then(onStart)
+
+        })
+
+
+    </script>
+
+</body>
+
+</html>
