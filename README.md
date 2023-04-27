@@ -7,3 +7,6 @@ For example:
 `python -m http.server 8000`
 or
 `nodemon --ext html,js,glb,json --verbose --exec http-server -p 8081`
+
+
+see https://glitch.com/@64blit for examples running live
