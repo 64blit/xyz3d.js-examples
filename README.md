@@ -43,6 +43,7 @@ iframe #XYZ3d-fullscreen {
 /* A dynamic button, used to close the popup, is created and 
 parented to the popup-content div as follows: 
 `<div id="XYZ3d-close-btn" class="XYZ3d-close-btn"><span>✕</span></div>` */
+
 .XYZ3d-close-btn {
   color: #fff;
   font-size: 1.4rem;
@@ -56,20 +57,8 @@ parented to the popup-content div as follows:
   z-index: 2;
 }
 
-.XYZ3d-close-btn span {
-  position: absolute;
-  bottom: 50%;
-  right: 50%;
-  transform: translate(50%, 50%);
-}
+/* The selectors to hide and show the popup dom element */
 
-.XYZ3d-close-btn:hover {
-  cursor: pointer;
-  transition: background-color 100ms linear;
-  background-color: #898989;
-}
-
-/* The hide and show selectors for the popup dom element */
 .XYZ3d-visible {
   z-index: 2 !important;
   opacity: 1;
